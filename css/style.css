@@ -397,7 +397,7 @@ i.mail {
 .footer-left {
   background-color: #000;
   padding: 3em 3.2em;
-  width: 22%;
+  width: 30%;
   margin: 0 auto 3em;
 }
 .co-ntact {
@@ -451,7 +451,7 @@ i.insta:hover {
   margin:0 0.1em;
 }
 .soci {
-  margin: 2em 0 0;
+  margin: 2em 3em 0;
 }
 .to input[type="text"] {
   padding: 18px;
