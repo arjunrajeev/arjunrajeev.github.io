@@ -436,12 +436,12 @@ i.goopl:hover {
 i.insta {
   width: 34px;
   height: 34px;
-  background: url(../images/img-sprite.png)no-repeat -77px 1px;
-  float: left;
+  background: url(../images/social-icons-sprite.png)no-repeat -112px 1px;
+  float: right;
   vertical-align: middle;
 }
 i.insta:hover {
-  background: url(../images/img-sprite.png)no-repeat -77px -43px;
+  background: url(../images/social-icons-sprite.png)no-repeat -112px 0px;
 }
 .soci ul {
   padding: 0;
