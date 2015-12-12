@@ -13,7 +13,7 @@ description: > # this means to ignore newlines until "baseurl:"
   software test automation. He is committed towards continuous delivery,
    implementing industry best practices and passionate about designing 
   test automation frameworks.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://arjunrajeev.co.in" # the base hostname & protocol for your site
 sass:
   sass_dir: _sass
