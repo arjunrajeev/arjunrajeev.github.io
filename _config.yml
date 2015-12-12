@@ -17,7 +17,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://arjunrajeev.co.in" # the base hostname & protocol for your site
 sass:
   sass_dir: _sass
-github_username:  arjun-rajeev
+github_username:  arjunrajeev
 disqus: arjun_rajeev
 # Build settings
 markdown: kramdown
