@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Cucumber-JVM testing parallel"
-date:   2016-01-04 16:17:47 +0530
+date:   2016-01-04 12:17:47 +0530
 categories: cucumber jvm testng parallel 
 ---
 
