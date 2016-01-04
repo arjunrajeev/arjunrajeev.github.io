@@ -9,7 +9,7 @@ Over the past few days I have been trying my luck with the Cucumber-JVM. I have 
 
 Deep in my heart, I knew that it was difficult but not impossible. I started framing a testng based automation framework for cucumber soon enough. This was mainly experimentation with a lot of hits and miss. Soon I arrived at the structure and classified my framework components.
 
- ![Framework Structure]({{site.url}}/assets/cucumber-jvm/frameworkStructure.png)
+ ![Framework Structure](/assets/cucumber-jvm/frameworkStructure.png)
  
  - util.DataMapper : This class helps me read the not so important data from external csv file. Please bear in mind that I am not trying to data drive my cucumber features. The external data for me are non decision making data. If at all there is an attempt made towards data driving the features or scenarios then we are defeating the purpose of cucumber.
  
