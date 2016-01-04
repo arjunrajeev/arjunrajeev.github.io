@@ -18,7 +18,7 @@ Deep in my heart, I knew that it was difficult but not impossible. I started fra
  
  - cukes.AbstractSteps : This class will be inherited by the step definitions. As per my design I am planning to keep all my verify in this method. This will allow me to do verifications at the step definitions and not at the page methods.
  
- -cukes.AbstractTest : This class will host all the testNG configuration methods. Please note that we cannot have the cucumber.api.hooks defined here (at least as of now).
+ - cukes.AbstractTest : This class will host all the testNG configuration methods. Please note that we cannot have the cucumber.api.hooks defined here (at least as of now).
  
  - support.AbstractPage : This will host all the page methods like click, enterText, waits etc.
 
