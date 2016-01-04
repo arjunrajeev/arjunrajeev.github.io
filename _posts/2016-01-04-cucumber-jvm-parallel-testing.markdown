@@ -3,9 +3,8 @@ layout: post
 comments: true
 title:  "Cucumber-JVM testing parallel"
 date:   2016-01-04 12:17:47 +0530
-categories: cucumber jvm testng parallel 
+categories: cucumber jvm 
 ---
-
 Over the past few days I have been trying my luck with the Cucumber-JVM. I have been an active rubyist and was under the strong impression that migrating to the JVM version would be a cake walk, but soon realized the bitter truth that it is not that easy. Another big concern for me after working with testNG and selenium for the last few years, is that I was missing out on the parallel testing feature. Aslak wrote cucumber at least the JVM version to be tightly coupled with junit and little or no scope for any casual parallel/ concurrent processing. He has his reasons, so do we to request this feature. Unfortunately no body has the time to contribute to the cucumber project to make this possible. Another striking issue was to keep the cucumber layer outside of the core test framework. This is also difficult as cucumber does not allow the api hooks to be extended. With all the road blocks I found my self locked out in my room with a piece of paper and pen for hours together. 
 
 Deep in my heart, I knew that it was difficult but not impossible. I started framing a testng based automation framework for cucumber soon enough. This was mainly experimentation with a lot of hits and miss. Soon I arrived at the structure and classified my framework components.
@@ -37,3 +36,4 @@ Deep in my heart, I knew that it was difficult but not impossible. I started fra
  Please note that I am not trying to execute my scenarios in parallel, but my features are intended to be so. Even I do not have the luxury of time to design my scenarios in parallel and more that that I do not feel that it is needed. Also I have testNG classes that for individual feature files. These classes extend a custom hooks which sets the scenario variable in my AbstractTest class discussed earlier (This is very important or else there will only be null pointer exceptions while executing the features). The testNG xml runs all the features in parallel and can be triggered by maven sure fire plugin. Please note that the formatter used here is json and without it reporting is impossible as I am using the cucumber-reporting jar for the purpose. Once the suites are executed then maven exec plugin executes the main method that publishes the report.
  
  Hope that this article will give you a good start automating in cucumber and testNG.
+ 
