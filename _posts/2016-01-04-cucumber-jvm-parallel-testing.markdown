@@ -27,9 +27,9 @@ Deep in my heart, I knew that it was difficult but not impossible. I started fra
  
  - support.Log : This class is mainly used for logging into the cucumber reports. There is however a catch here. If this class needs to be used, then the scenario should be initialized in the AbstractTest class. This is done easily using the cucumber.api.hooks (@Before) from the actual test project.
  
- The framework is placed in github under [core-framework]({%https://github.com/arjunrajeev/Core-Framework%})
+ The framework is placed in github under [Core Framework][core-framework]
  
- The sample project consuming this framework is also present under [cucumber-project]({%https://github.com/arjunrajeev/cucumber-project%})
+ The sample project consuming this framework is also present under [Cucumber Project][cucumber-project]
  
  Now that you have both the repositories, I suggest you go ahead an give it a try using the _mvn clean install_ command. There should be not reason why they will not execute. The default browser configured is chrome, so please make sure you have the chromedriver available. Also please ensure that the selenium-standalone-server is up and running. 
  
@@ -37,3 +37,5 @@ Deep in my heart, I knew that it was difficult but not impossible. I started fra
  
  Hope that this article will give you a good start automating in cucumber and testNG.
  
+ [core-framework]: https://github.com/arjunrajeev/Core-Framework
+ [cucumber-project]: https://github.com/arjunrajeev/cucumber-project
