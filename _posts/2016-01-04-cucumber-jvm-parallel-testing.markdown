@@ -12,7 +12,7 @@ Deep in my heart, I knew that it was difficult but not impossible. I started fra
 
  ![Framework Structure]({{site.url}}/assets/cucumber-jvm/frameworkStructure.png)
  
-- util.DataMapper : This class helps me read the not so important data from external csv file. Please bear in mind that I am not trying to data drive my cucumber features. The external data for me are non decision making data. If at all there is an attempt made towards data driving the features or scenarios then we are defeating the purpose of cucumber.
+ - util.DataMapper : This class helps me read the not so important data from external csv file. Please bear in mind that I am not trying to data drive my cucumber features. The external data for me are non decision making data. If at all there is an attempt made towards data driving the features or scenarios then we are defeating the purpose of cucumber.
  
  - conditions.Conditions : This class provides me with custom ExpectedConditions modelled around the selenium ExpectedConditions. This will help me in using waits and verifies in a more easier and readable format. Also I will stop having a a lot of individual wait or verify methods in my design.
  
