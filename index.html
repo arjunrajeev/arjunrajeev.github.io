@@ -7,28 +7,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="text/html">
-<title>Open Book, Arjun Rajeev's Personal Portfolio</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="arjun, rajeev, testing, agile, automation, java, ruby, cucumber, gherkin, geb, jasmine, webdriver, protractor, responsive web test, solution architect, test architect, automation best practices" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link rel="stylesheet" href="css/swipebox.css">
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
-       <script type="text/javascript" src="js/easing.js"></script>
-		<script type="text/javascript">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="text/html">
+    <title>Open Book, Arjun Rajeev's Personal Portfolio</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords"
+          content="arjun, rajeev, testing, agile, automation, java, ruby, cucumber, gherkin, geb, jasmine, webdriver, protractor, responsive web test, solution architect, test architect, automation best practices"/>
+    <script type="application/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+
+
+
+
+    </script>
+    <link rel="stylesheet" href="css/swipebox.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
 					event.preventDefault();
 					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 				});
 			});
-		</script>
-		<script type="text/javascript">
+
+
+
+
+
+    </script>
+    <script type="text/javascript">
 		$(document).ready(function() {
 				/*
 				var defaults = {
@@ -40,224 +52,396 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				*/
 		$().UItoTop({ easingType: 'easeOutQuart' });
 });
-</script>
-<!------ Light Box ------>
-    <script src="js/jquery.swipebox.min.js"></script> 
+
+
+
+
+
+    </script>
+    <!------ Light Box ------>
+    <script src="js/jquery.swipebox.min.js"></script>
     <script type="text/javascript">
 		jQuery(function($) {
 			$(".swipebox").swipebox();
 		});
-	</script>
-    <!------ Eng Light Box ------>
 
+
+
+
+
+    </script>
+    <!------ Eng Light Box ------>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Khula:700);
+        body {
+        background: #111;
+        }
+        .hidden {
+        opacity:0;
+        }
+        .console-container {
+
+        font-family:Khula;
+        font-size:1em;
+        text-align:center;
+        height:30px;
+        width:600px;
+        display:table-row;
+        position:relative;
+        color:white;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        margin:auto;
+        }
+        .console-underscore {
+        display:inline-block;
+        position:relative;
+        top:-0.14em;
+        left:10px;
+        }
+    </style>
 </head>
 <body>
 <!-- header -->
-	<div class="banner">
-		<div class="container">
-			<div class="logo">
-				<h1><a href="/blog/">open book blog</a></h1>
-			</div>	
-			<div class="banner-info">
-				<h2>Hi,I am Arjun</h2>
-				<h3>Tester, thinker, visionary and a proud father.</h3>
-			</div>
-		</div>
-	</div>
+<div class="banner">
+    <div class="container">
+        <div class="logo">
+            <h1><a href="/blog/">open book blog</a></h1>
+        </div>
+        <div class="banner-info">
+            <h2>
+                <div class='console-container'><span id='h3rollTitle'></span>
+                    <div style="float:left;">I am&nbsp;</div>
+
+                    <div style="float:right;" class='console-underscore' id='console'>&#95;</div>
+                </div>
+            </h2>
+            <script>
+   consoleText([' ARJUN', ' a tester', ' a thinker', ' a visionary',' a proud father'], 'h3rollTitle',['White','White','White','White']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+
+
+
+
+            </script>
+        </div>
+    </div>
+</div>
 <!-- header -->
 <!-- about -->
-				<div class="scroll">
-					<a href="#contact" class="scroll"><img src="images/down.png" class="img-responsive" alt=""></a>
-				</div>
-	<div class="about">
-		<div class="container">
-			<h3>My skills</h3>
-			<div class="study2">
-			<div class="col-md-6 about-left">
-						<h4>java</h4>
-							<div class="progress">
-							  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-								<span class="sr-only">90% Complete (success)</span>
-							  </div>
-							</div>
-						<h4>ruby</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-							<span class="sr-only">80% Complete</span>
-						  </div>
-						</div>
-						<h4>js</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-							<span class="sr-only">30% Complete (warning)</span>
-						  </div>
-						</div>
-						<h4>c#</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-							<span class="sr-only">50% Complete (danger)</span>
-						  </div>
-						</div>
-						<h4>vbscript</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-							<span class="sr-only">90% Complete (danger)</span>
-						  </div>
-						</div>
-						<h4>groovy</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-							<span class="sr-only">60% Complete (danger)</span>
-						  </div>
-						</div>
-					</div>
-					<div class="col-md-6 about-right">
-						<h4>UFT/ QTP, ALM/QC</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-							<span class="sr-only">90% Complete (danger)</span>
-						  </div>
-						</div>
-						<h4>Selenium, Watir WebDriver</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-							<span class="sr-only">90% Complete (danger)</span>
-						  </div>
-						</div>
-						<h4>Appium, SeeTest</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-							<span class="sr-only">90% Complete (danger)</span>
-						  </div>
-						</div>
-						<h4>Geb, Protractor</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-							<span class="sr-only">90% Complete (danger)</span>
-						  </div>
-						</div>
-						<h4>WebServices and Performance</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
-							<span class="sr-only">75% Complete (success)</span>
-						  </div>
-						</div>
-						<h4>TestComplete, Ranorex, Sikuli</h4>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
-							<span class="sr-only">65% Complete (success)</span>
-						  </div>
-						</div>
-					</div>
-		</div>
-	</div>
-	</div>
+<div class="scroll">
+    <a href="#contact" class="scroll"><img src="images/down.png" class="img-responsive" alt=""></a>
+</div>
+<div class="about">
+    <div class="container">
+        <h3>My skills</h3>
+        <div class="study2">
+            <div class="col-md-6 about-left">
+                <h4>java</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="sr-only">90% Complete (success)</span>
+                    </div>
+                </div>
+                <h4>ruby</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="80"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete</span>
+                    </div>
+                </div>
+                <h4>js</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="30"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                        <span class="sr-only">30% Complete (warning)</span>
+                    </div>
+                </div>
+                <h4>c#</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="50"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                        <span class="sr-only">50% Complete (danger)</span>
+                    </div>
+                </div>
+                <h4>vbscript</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="sr-only">90% Complete (danger)</span>
+                    </div>
+                </div>
+                <h4>groovy</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="60"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="sr-only">60% Complete (danger)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 about-right">
+                <h4>UFT/ QTP, ALM/QC</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="sr-only">90% Complete (danger)</span>
+                    </div>
+                </div>
+                <h4>Selenium, Watir WebDriver</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="sr-only">90% Complete (danger)</span>
+                    </div>
+                </div>
+                <h4>Appium, SeeTest</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="sr-only">90% Complete (danger)</span>
+                    </div>
+                </div>
+                <h4>Geb, Protractor</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="90"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                        <span class="sr-only">90% Complete (danger)</span>
+                    </div>
+                </div>
+                <h4>WebServices and Performance</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="75"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                        <span class="sr-only">75% Complete (success)</span>
+                    </div>
+                </div>
+                <h4>TestComplete, Ranorex, Sikuli</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger-3" role="progressbar" aria-valuenow="65"
+                         aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+                        <span class="sr-only">65% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- about -->
 <!-- services -->
-	<div class="services">
-		<div class="container">
-			<h3>Services</h3>
-			<div class="service-grids">
-							<div class="col-md-4 service-grid">
-									<span class="glyphicon glyphicon-tower" aria-hidden="true"></span>
-								<h4>THE TEST ARCHITECT</h4>
-								<span> </span>
-								<p>The key challenge comes to designing an automation framework. The myth of an organization-wide framework no longer stands good. The framework has to suite the application, the desired tool sets used for automation, as well as the end user group. Using advanced concepts like BDD, Page Objects, Command patterns, and Assertions add heavily to the framework as well. The test automation framework is ultimately a product that helps you tackle day to day tasks, an escapede from complexities, and helps you test better.</p>
-							</div>
-							<div class="col-md-4 service-grid">
-								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-								<h4>THE TEST DESIGNER</h4>
-								<span> </span>
-								<p>The important consideration while writing tests is, what we have applied from our learning and how robust the tests are. I can write a hundred tests that can yield very few defects or write very few tests that can yield many defects. There are different techniques that can help in writing effective tests; Orthogonal Arrays or Dependency Structure Matrix are just to name a few. Authoring effective tests is essentially a skill that is hard to master. </p>
-							</div>
-							<div class="col-md-4 service-grid">
-								<span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-								<h4>THE INNOVATOR</h4>
-								<span> </span>
-								<p>"Extraordinary people don't do extraordinary things, they do ordinary things in an extraordinary way". Innovations need not be groundbreaking findings or initiatives. It can be the use of technology, to do things which were considered not possible. How well motivated are you towards the technology and how much up to date are you with the trends and techniques in the industry; these are all innovations. I always try to keep myself occupied with a lot of projects, which help me understand different automation techniques as automation is ever changing.</p>
-							</div>
-							<div class="col-md-4 service-grid">
-								<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-								<h4>THE MENTOR</h4>
-								<span> </span>
-								<p>Owning my resposibility is very easy. But what about an entire team? The challenges are quite different. As somebody said all fingers in your hand are of different sizes, so are your team members. Some are more experienced, some are less, some are technically strong while others are not. You have to be flexible to lower yourself or sometimes rise up to the level of your team members to create an environment of constructive critisism and healthy competition. Remember if you are in a traffic block, you are also part of it. </p>
-							</div>
-							<div class="col-md-4 service-grid">
-								<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-								<h4>THE LEARNER</h4>
-								<span> </span>
-								<p>"I never fail, I just learn". In the stream of business I am in, I feel that learning is a continuous process. We learn something every day from a technology standpoint or a management point of view. The quench for knowlegde is never over. I am more inclined towards technology and hope that it will continue for the years to come. I am extremely thankful to the internet and most importantly people who share their knowledge instead of keeping it to themselves. I have started to contribute to the open source communities and have a passion towards knowlegde sharing.</p>
-							</div>
-							<div class="col-md-4 service-grid">
-								<span class="glyphicon glyphicon-road" aria-hidden="true"></span>
-								<h4>THE ROAD AHEAD</h4>
-								<span> </span>
-								<p>I cannot predict the future, and neither do I want to. But having said that, I do want to be part of an organization that will help me be the kind of person I am, ethical and do things the right way, at the right time. I like to take ownership of my deliverables, be the integral part of the team, mentor and guide junior mates, and at the same time, learn from my superiors and other industry leaders. </p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-		</div>
-	</div>
+<div class="services">
+    <div class="container">
+        <h3>Services</h3>
+        <div class="service-grids">
+            <div class="col-md-4 service-grid">
+                <span class="glyphicon glyphicon-tower" aria-hidden="true"></span>
+                <h4>THE TEST ARCHITECT</h4>
+                <span> </span>
+                <p>The key challenge comes to designing an automation framework. The myth of an organization-wide
+                    framework no longer stands good. The framework has to suite the application, the desired tool sets
+                    used for automation, as well as the end user group. Using advanced concepts like BDD, Page Objects,
+                    Command patterns, and Assertions add heavily to the framework as well. The test automation framework
+                    is ultimately a product that helps you tackle day to day tasks, an escapede from complexities, and
+                    helps you test better.</p>
+            </div>
+            <div class="col-md-4 service-grid">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <h4>THE TEST DESIGNER</h4>
+                <span> </span>
+                <p>The important consideration while writing tests is, what we have applied from our learning and how
+                    robust the tests are. I can write a hundred tests that can yield very few defects or write very few
+                    tests that can yield many defects. There are different techniques that can help in writing effective
+                    tests; Orthogonal Arrays or Dependency Structure Matrix are just to name a few. Authoring effective
+                    tests is essentially a skill that is hard to master. </p>
+            </div>
+            <div class="col-md-4 service-grid">
+                <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+                <h4>THE INNOVATOR</h4>
+                <span> </span>
+                <p>"Extraordinary people don't do extraordinary things, they do ordinary things in an extraordinary
+                    way". Innovations need not be groundbreaking findings or initiatives. It can be the use of
+                    technology, to do things which were considered not possible. How well motivated are you towards the
+                    technology and how much up to date are you with the trends and techniques in the industry; these are
+                    all innovations. I always try to keep myself occupied with a lot of projects, which help me
+                    understand different automation techniques as automation is ever changing.</p>
+            </div>
+            <div class="col-md-4 service-grid">
+                <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                <h4>THE MENTOR</h4>
+                <span> </span>
+                <p>Owning my resposibility is very easy. But what about an entire team? The challenges are quite
+                    different. As somebody said all fingers in your hand are of different sizes, so are your team
+                    members. Some are more experienced, some are less, some are technically strong while others are not.
+                    You have to be flexible to lower yourself or sometimes rise up to the level of your team members to
+                    create an environment of constructive critisism and healthy competition. Remember if you are in a
+                    traffic block, you are also part of it. </p>
+            </div>
+            <div class="col-md-4 service-grid">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                <h4>THE LEARNER</h4>
+                <span> </span>
+                <p>"I never fail, I just learn". In the stream of business I am in, I feel that learning is a continuous
+                    process. We learn something every day from a technology standpoint or a management point of view.
+                    The quench for knowlegde is never over. I am more inclined towards technology and hope that it will
+                    continue for the years to come. I am extremely thankful to the internet and most importantly people
+                    who share their knowledge instead of keeping it to themselves. I have started to contribute to the
+                    open source communities and have a passion towards knowlegde sharing.</p>
+            </div>
+            <div class="col-md-4 service-grid">
+                <span class="glyphicon glyphicon-road" aria-hidden="true"></span>
+                <h4>THE ROAD AHEAD</h4>
+                <span> </span>
+                <p>I cannot predict the future, and neither do I want to. But having said that, I do want to be part of
+                    an organization that will help me be the kind of person I am, ethical and do things the right way,
+                    at the right time. I like to take ownership of my deliverables, be the integral part of the team,
+                    mentor and guide junior mates, and at the same time, learn from my superiors and other industry
+                    leaders. </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
 <!-- services -->
 <!-- portfolio -->
-	<div class="gallery">
-		<div class="container">
-			<h3>In my free time</h3>
-			<div class="portfolio">
-					<div id="portfoliolist">
-					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">		
-							 <a href="images/travel.jpg" class="swipebox"  title="Travelling"> <img src="images/travel.JPG" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-		                </div>
-					</div>				
-					<div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">		
-							 <a href="images/cooking.jpg" class="swipebox"  title="Cooking"> <img src="images/cooking.JPG" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-		                </div>
-					</div>					
-					<div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">		
-							 <a href="images/coding.jpg" class="swipebox"  title="Technology Exploration aka Coding"> <img src="images/coding.JPG" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-		                </div>
-					</div>
-					<div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">		
-							 <a href="images/movies.jpg" class="swipebox"  title="Watch Movies"> <img src="images/movies.JPG" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-		                </div>
-					</div>
-				<div class="clearfix"></div>					
-				</div>
-		  <div class="clearfix"></div>
-			</div>
+<div class="gallery">
+    <div class="container">
+        <h3>In my free time</h3>
+        <div class="portfolio">
+            <div id="portfoliolist">
+                <div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card"
+                     style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper grid_box">
+                        <a href="images/travel.jpg" class="swipebox" title="Travelling"> <img src="images/travel.JPG"
+                                                                                              class="img-responsive"
+                                                                                              alt=""><span
+                                class="zoom-icon"></span> </a>
+                    </div>
+                </div>
+                <div class="portfolio app mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="app"
+                     style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper grid_box">
+                        <a href="images/cooking.jpg" class="swipebox" title="Cooking"> <img src="images/cooking.JPG"
+                                                                                            class="img-responsive"
+                                                                                            alt=""><span
+                                class="zoom-icon"></span> </a>
+                    </div>
+                </div>
+                <div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon"
+                     style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper grid_box">
+                        <a href="images/coding.jpg" class="swipebox" title="Technology Exploration aka Coding"> <img
+                                src="images/coding.JPG" class="img-responsive" alt=""><span class="zoom-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio icon mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="icon"
+                     style="display: inline-block; opacity: 1;">
+                    <div class="portfolio-wrapper grid_box">
+                        <a href="images/movies.jpg" class="swipebox" title="Watch Movies"> <img src="images/movies.JPG"
+                                                                                                class="img-responsive"
+                                                                                                alt=""><span
+                                class="zoom-icon"></span> </a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
 
-		</div>
-	</div>
-<!-- portfolio -->	
+    </div>
+</div>
+<!-- portfolio -->
 <!-- client -->
-	<div class="client">
-		<div class="container">
-			<h3>About me from others</h3>
-			<div class="nbs-flexisel-container"><div class="nbs-flexisel-inner">
-				<ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -228px; display: block;">			
-					<li class="nbs-flexisel-item">
-						<h4 style="color:white;">Arjun is very reliable, hard-working and brimming with ideas. He is able to understand new technologies in a short time and come up with innovative solutions. He is a good team player.<br><br>Nikhil Gupta<br>Senior Director NTT DATA</h4>
-						<div class="sliderfig-grid">
-						</div>
-					</li>	
-					<li class="nbs-flexisel-item">
-						<h4 style="color:white;">I have worked with Arjun in Dividend operation module under ADR project in BNYM. He is result oriented person and always curious about his delivery part. When it comes to client deliverable is concern and he can stretch it any level to make sure deliverable on time.He has both technically and managerial wise strong person in terms of career. overall he is a fantastic person to have in a team with always enthusiastic and positive attitude.<br><br>Srini Thillai<br>Senior Software Engineer, Wipro Technologies</h4>
-						<div class="sliderfig-grid">
-						</div>
-					</li>
-					<li class="nbs-flexisel-item">
-						<h4 style="color:white">One of the best technical solutions provider I have ever met in my career. Very hard working and supportive. Working with him is fun. Getting an opportunity to work with him is blessing to the team. He has the capability to provide solutions, train/guide teams in tools & languages. He will be an asset to any company. His managers can be rest assured when any technically challenging assignment is assigned to him. I would recommend him for any position which requires immense challenges and technical expertise.
-						<br><br>Sreekanth Simhadri<br>Senior Architect, Cigniti Technologies</h4>
-						<div class="sliderfig-grid">
-						</div>
-					</li>				
-				</ul>
-					<div class="nbs-flexisel-nav-left" style="top: 27.5px;"></div><div class="nbs-flexisel-nav-right" style="top: 27.5px;"></div></div></div>
-					<script type="text/javascript">
+<div class="client">
+    <div class="container">
+        <h3>About me from others</h3>
+        <div class="nbs-flexisel-container">
+            <div class="nbs-flexisel-inner">
+                <ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -228px; display: block;">
+                    <li class="nbs-flexisel-item">
+                        <h4 style="color:white;">Arjun is very reliable, hard-working and brimming with ideas. He is
+                            able to understand new technologies in a short time and come up with innovative solutions.
+                            He is a good team player.<br><br>Nikhil Gupta<br>Senior Director NTT DATA</h4>
+                        <div class="sliderfig-grid">
+                        </div>
+                    </li>
+                    <li class="nbs-flexisel-item">
+                        <h4 style="color:white;">I have worked with Arjun in Dividend operation module under ADR project
+                            in BNYM. He is result oriented person and always curious about his delivery part. When it
+                            comes to client deliverable is concern and he can stretch it any level to make sure
+                            deliverable on time.He has both technically and managerial wise strong person in terms of
+                            career. overall he is a fantastic person to have in a team with always enthusiastic and
+                            positive attitude.<br><br>Srini Thillai<br>Senior Software Engineer, Wipro Technologies</h4>
+                        <div class="sliderfig-grid">
+                        </div>
+                    </li>
+                    <li class="nbs-flexisel-item">
+                        <h4 style="color:white">One of the best technical solutions provider I have ever met in my
+                            career. Very hard working and supportive. Working with him is fun. Getting an opportunity to
+                            work with him is blessing to the team. He has the capability to provide solutions,
+                            train/guide teams in tools & languages. He will be an asset to any company. His managers can
+                            be rest assured when any technically challenging assignment is assigned to him. I would
+                            recommend him for any position which requires immense challenges and technical expertise.
+                            <br><br>Sreekanth Simhadri<br>Senior Architect, Cigniti Technologies</h4>
+                        <div class="sliderfig-grid">
+                        </div>
+                    </li>
+                </ul>
+                <div class="nbs-flexisel-nav-left" style="top: 27.5px;"></div>
+                <div class="nbs-flexisel-nav-right" style="top: 27.5px;"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
 							$(window).load(function() {
 								$("#flexiselDemo1").flexisel({
 									visibleItems: 1,
@@ -283,34 +467,39 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								});
 								
 							});
-					</script>
-					<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 
 
 
-		</div>
-	</div>
+
+
+        </script>
+        <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+
+
+    </div>
+</div>
 <!-- client -->
 <!-- contact -->
-	<div class="contact" id="contact">
-		<div class="container">
-			<h3>Let's get in touch</h3>
-			<div class="footer-left">
-				<li><i class="add"> </i>Hyderabad, India</li>
-				<li><a href="tel:+917680074772"><i class="phone"></i>+91 76800 74772</a></li>
-				<li><a href="mailto:arjun.rajeev@outlook.com"><i class="mail"> </i>arjun.rajeev@outlook.com </a></li>
-				<div class="soci">
-					<ul>
-						<li><a href="https://in.linkedin.com/in/arjun-rajeev-10887725"><i class="insta"> </i></a></li>
-							<div class="clearfix"></div>	
-					</ul>
-				</div>
-			</div>
-		</div>
-		
-		<p>Copyrights ©2015 Recoup. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-	</div>
-	<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover" style="opacity: 0;"> </span></a>
+<div class="contact" id="contact">
+    <div class="container">
+        <h3>Let's get in touch</h3>
+        <div class="footer-left">
+            <li><i class="add"> </i>Hyderabad, India</li>
+            <li><a href="tel:+917680074772"><i class="phone"></i>+91 76800 74772</a></li>
+            <li><a href="mailto:arjun.rajeev@outlook.com"><i class="mail"> </i>arjun.rajeev@outlook.com </a></li>
+            <div class="soci">
+                <ul>
+                    <li><a href="https://in.linkedin.com/in/arjun-rajeev-10887725"><i class="insta"> </i></a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <p>Copyrights ©2015 Recoup. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+</div>
+<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 0;"></span> <span id="toTopHover"
+                                                                                                       style="opacity: 0;"> </span></a>
 <!-- contact -->
 </body>
 </html>
