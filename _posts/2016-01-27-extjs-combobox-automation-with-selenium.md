@@ -19,7 +19,7 @@ Step 1 was the most toughest part for me at least, after which everything just f
 
   {% highlight javascript%}Ext.ComponentQuery.query("combobox[billingFieldName='billingState']")){% endhighlight %} 
 
-![Framework Structure](/assets/cucumber-jvm/frameworkStructure.png)
+![Framework Structure](/assets/ext-combo/snippet.png)
 
 Ain't this look like a CSS locator?? Ok let's get back to business. Once you have expanded the returned js object, you might have seen something called the triggerEl field. This will give you the reference to the dropdown button. And from the trigger get the dom id, bravo you have the html id for the required element which marks the completion of Step 2. Similarly check out the picker field of the object, and you have the html id of the bound list which is now more related to the combobox field than ever. Now just pick up the bound list item and perform a click on the desired li item. 
  
