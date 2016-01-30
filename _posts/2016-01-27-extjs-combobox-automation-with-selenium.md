@@ -86,4 +86,4 @@ public class ExtComboboxTest {
 
 Now, you have some fun automating ExtJS comboboxes while I keep exploring the other Ext components that can have a generalized library like the one we discussed now.
 
-[kitchen sink]: http://dev.sencha.com/extjs/5.0.0/examples/kitchensink/#form-register
+[kitchen sink]: http://dev.sencha.com/extjs/5.0.0/examples/kitchensink/#form-checkout
