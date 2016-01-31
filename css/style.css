@@ -58,13 +58,13 @@ body a{
 }
 .banner-info h2 {
   color: #fff;
-  font-size: 5em;
+  font-size: 2em;
   text-align: center;
   margin: 0;
   font-weight: 700;
   background-color: rgba(65, 139, 202, 0.64);
   padding: 0.4em 1em;
-  width: 80%;
+  width: 50%;
   font-family: Nunito-Regular;
 }
 .banner-info h3 {
