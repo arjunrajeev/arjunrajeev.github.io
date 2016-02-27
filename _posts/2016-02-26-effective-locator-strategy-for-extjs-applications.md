@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Effective Locator Strategy for ExtJs automation"
-date:   2016-01-27 05:51:47 +0530
+date:   2016-02-26 05:51:47 +0530
 categories: automation selenium extjs automation
 ---
 I have been working my way through with automation of an ExtJs application for the last few weeks. Oh boy, had it not been a really annoying journey?? Well guess not. I had the fortune of addressing this challenge that automation engineers all over the world have been facing and been annoyed with. A few years back in one of the engagements we were scanvenging relational xpath and creating tailored methods for certain elements creating an impossibly nightmarish scripts from a maintenance point of view. So this time I thought of investigating better a better technique and that when my world just opened to ComponentQuery.
