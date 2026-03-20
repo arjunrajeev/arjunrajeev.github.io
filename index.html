@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Profile — Arjun Rajeev</title>
+  <title>Arjun Rajeev | Engineering Leader, Agentic AI & DevOps</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { background: #07111f; }
@@ -100,24 +100,42 @@
 
     @media print {
       @page {
-        margin: 12mm;
+        size: A4;
+        margin: 10mm;
       }
 
-      html, body {
+      html,
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
         background: #ffffff !important;
         color: #111827 !important;
+        font-size: 10.5pt;
+        line-height: 1.35;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
 
-      * , *::before, *::after {
+      *,
+      *::before,
+      *::after {
         box-shadow: none !important;
         text-shadow: none !important;
         filter: none !important;
       }
 
-      .fixed.inset-0.pointer-events-none.overflow-hidden {
+      .fixed.inset-0.pointer-events-none.overflow-hidden,
+      span[onclick="window.print()"] {
         display: none !important;
+      }
+
+      .max-w-7xl {
+        max-width: none !important;
+      }
+
+      .relative.max-w-7xl.mx-auto {
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
       .glass,
@@ -200,16 +218,17 @@
 
       a {
         color: inherit !important;
+        text-decoration: none !important;
       }
 
-      .max-w-7xl {
-        max-width: none !important;
+      header {
+        margin-bottom: 12px !important;
       }
 
       header + .grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 16px !important;
+        gap: 12px !important;
       }
 
       aside,
@@ -220,25 +239,25 @@
       aside {
         display: flex !important;
         flex-direction: column !important;
-        gap: 16px !important;
+        gap: 12px !important;
       }
 
-      //Skills
+      /* Skills */
       aside > div:nth-of-type(1) {
         order: 1;
       }
 
-      //Achievements
+      /* Achievements */
       aside > div:nth-of-type(2) {
         order: 3;
       }
 
-      //Education
+      /* Education */
       aside > div:nth-of-type(3) {
         order: 2;
       }
 
-      //intereset
+      /* Interests */
       aside > div:nth-of-type(4) {
         order: 4;
       }
@@ -250,11 +269,7 @@
       header,
       aside > div,
       .client-card,
-      footer {
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-
+      footer,
       main .space-y-0 > div {
         break-inside: avoid;
         page-break-inside: avoid;
@@ -291,10 +306,10 @@
 <!--              <span class="badge-pill">Available</span>-->
             </div>
             <p class="text-sky-300 text-sm font-semibold mb-2">
-              Senior Engineering Leader · Agentic AI Practitioner · DevOps & CI/CD Strategist · Automation at Scale
+              Engineering Leader · Agentic AI Practitioner · DevOps & CI/CD Strategist · Automation at Scale
             </p>
             <p class="text-slate-400 text-sm leading-relaxed max-w-3xl">
-              Senior engineering leader with 18+ years spanning Quality Assurance, Software Development, DevOps,
+              Engineering leader with 18+ years spanning Quality Assurance, Software Development, DevOps,
               Agentic AI, and enterprise solution delivery. Technical architect and hands-on engineering leader
               focused on automation, LLM systems, and production-grade CI/CD.
             </p>
